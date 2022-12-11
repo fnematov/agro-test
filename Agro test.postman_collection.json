@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "5f540bc8-75cc-45b3-b0af-0dc6f5575655",
+		"name": "Agro test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9404072"
+	},
+	"item": [
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "Vacancies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/vacancy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vacancy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\": 1,\n    \"position_id\": 1,\n    \"title\": \"Senior PHP/Laravel developer\",\n    \"job_description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\",\n    \"workplace_type\": 1,\n    \"employment_type\": 1,\n    \"skills\": [\"php\", \"laravel\", \"postgres\"],\n    \"languages\": [\"en\", \"uz\", \"ru\"],\n    \"salary_from\": 15000000,\n    \"salary_to\": 15000000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/vacancy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show vacancy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/vacancy/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vacancy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\": 2,\n    \"position_id\": 1,\n    \"title\": \"Senior PHP/Laravel developer\",\n    \"job_description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\",\n    \"workplace_type\": 1,\n    \"employment_type\": 1,\n    \"skills\": [\"php\", \"laravel\", \"postgres\"],\n    \"languages\": [\"en\", \"uz\", \"ru\"],\n    \"salary_from\": 15000000,\n    \"salary_to\": 15000000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/vacancy/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vacancy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/vacancy/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show vacancy resumes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/vacancy/2/resumes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vacancy",
+								"2",
+								"resumes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Create Resume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "positions[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "positions[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[0][description]",
+									"value": "First company",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[0][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-11-03 12.13.32.jpg"
+								},
+								{
+									"key": "portfolio[0][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-11-03 12.13.35.jpg"
+								},
+								{
+									"key": "portfolio[1][description]",
+									"value": "Second company",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[1][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-10-30 00.18.31.jpg"
+								},
+								{
+									"key": "intro_text",
+									"value": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1991-05-18",
+									"type": "text"
+								},
+								{
+									"key": "is_male",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-10-29 22.40.26.jpg"
+								},
+								{
+									"key": "phone_number",
+									"value": "911160681",
+									"type": "text"
+								},
+								{
+									"key": "expected_salary",
+									"value": "25000000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "desired_position",
+									"value": "Full stack web developer",
+									"type": "text"
+								},
+								{
+									"key": "employment_types[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "employment_types[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "workplace_types[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "php",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "laravel",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "vuejs",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "uz",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "ru",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][location_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][organization_name]",
+									"value": "SOS",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][job_title]",
+									"value": "Full stack web developer",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][beginning_of_work]",
+									"value": "2017-01-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/resume",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resumes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Resume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "positions[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "positions[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[0][description]",
+									"value": "First company",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[0][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-11-03 12.13.32.jpg"
+								},
+								{
+									"key": "portfolio[0][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-11-03 12.13.35.jpg"
+								},
+								{
+									"key": "portfolio[1][description]",
+									"value": "Second company",
+									"type": "text"
+								},
+								{
+									"key": "portfolio[1][images][]",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-10-30 00.18.31.jpg"
+								},
+								{
+									"key": "intro_text",
+									"value": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "1991-05-18",
+									"type": "text"
+								},
+								{
+									"key": "is_male",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/fnematov/Downloads/2022-10-29 22.40.26.jpg"
+								},
+								{
+									"key": "phone_number",
+									"value": "911160681",
+									"type": "text"
+								},
+								{
+									"key": "expected_salary",
+									"value": "25000000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "desired_position",
+									"value": "Full stack web developer",
+									"type": "text"
+								},
+								{
+									"key": "employment_types[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "employment_types[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "workplace_types[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "php",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "laravel",
+									"type": "text"
+								},
+								{
+									"key": "skills[]",
+									"value": "vuejs",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "uz",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "ru",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][location_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][organization_name]",
+									"value": "SOS",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][job_title]",
+									"value": "Full stack web developer",
+									"type": "text"
+								},
+								{
+									"key": "worked_places[0][beginning_of_work]",
+									"value": "2017-01-15",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/resume/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Resume",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resume Responded vacancies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume/5/responded-vacancies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"5",
+								"responded-vacancies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vacancy response by resume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume/5/2/response",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"5",
+								"2",
+								"response"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resume vacancies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/resume/5/vacancies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"resume",
+								"5",
+								"vacancies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code === 200){",
+							"    pm.collectionVariables.set(\"token\", pm.response.json().authorization.token);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"hyman08@example.net\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/auth/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
